@@ -1,11 +1,11 @@
-FROM node:12
+FROM node:14-slim
 
 WORKDIR /app/listings
 
-COPY package*.json .
+COPY package*.json ./
 
 
-RUN  npm install
+RUN  npm install --omit=dev
 
 
 COPY . .
